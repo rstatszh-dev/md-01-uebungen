@@ -45,7 +45,6 @@ gapminder |>
 ## Lebenserwartung
 
 ```{r}
-
 gapminder_2007 <- gapminder |> 
   filter(year == 2007)
 

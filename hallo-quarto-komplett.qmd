@@ -2,11 +2,7 @@
 title: "Hallo Quarto"
 author: "Lars Schöbitz"
 date: today
-format: 
-  html:
-    toc: true
-    code-fold: true
-  pdf: default
+format: html
 editor: visual
 editor_options: 
   chunk_output_type: console
@@ -19,8 +15,6 @@ Daten können aus vielen verschiedenen Quellen importiert werden. In dieser Übu
 1.  einem R-Paket, das über die Funktion `library()` geladen wird.
 
 ```{r}
-#| message: false
-
 library(ggplot2)
 library(dplyr)
 library(gapminder)
@@ -53,7 +47,6 @@ gapminder |>
 ## Lebenserwartung
 
 ```{r}
-
 gapminder_2007 <- gapminder |> 
   filter(year == 2007)
 
