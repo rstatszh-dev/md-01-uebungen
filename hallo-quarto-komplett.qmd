@@ -1,6 +1,6 @@
 ---
 title: "Hallo Quarto"
-author: "Lars Schöbitz"
+author: "Rainbow Train"
 date: today
 format: html
 editor: visual
@@ -20,7 +20,6 @@ Laden der benötigten R-Pakete für die Analyse.
 library(ggplot2)
 library(dplyr)
 library(gapminder)
-library(gt)
 ```
 
 ## Gapminder Daten
@@ -35,29 +34,36 @@ head(gapminder)
 
 ## Lebenserwartung
 
-Die folgende Tabeller zeigt die durchschnittliche Lebenserwartung der Bevölkerung auf verschiedenen Kontinenten im Jahr 2007.
-
-Berechnung und Darstellung der durchschnittlichen Lebenserwartung pro Kontinent.
+Die folgende Tabeller zeigt die durchschnittliche Lebenserwartung pro Kontinent im Jahr 2007.
 
 ```{r}
-gapminder |> 
-  filter(year == 2007) |> 
+gapminder |>
+  filter(year == 2007) |>
   group_by(continent) |>
   summarise(
     mean_life_exp = mean(lifeExp)
-  ) |> 
-  gt() 
-
+  )
 ```
 
 ## Lebenserwartung
 
-Filtern der Daten für das Jahr 2007 und Erstellen eines erweiterten Boxplots.
+Filtern der Daten für das Jahr 2007.
 
 ```{r}
-gapminder_2007 <- gapminder |> 
+gapminder |>
   filter(year == 2007)
+```
 
+Speichern der gefilterten Daten in einem neuen Objekt. Dieses taucht im Environment auf und kann wiederverwendet werden.
+
+```{r}
+gapminder_2007 <- gapminder |>
+  filter(year == 2007)
+```
+
+Erstellen eines Boxplots zur Visualisierung der Lebenserwartung pro Kontinent.
+
+```{r}
 ggplot(data = gapminder_2007, 
        mapping = aes(x = continent, 
                      y = lifeExp)) +
