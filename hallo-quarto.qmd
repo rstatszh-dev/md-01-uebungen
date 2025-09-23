@@ -32,7 +32,7 @@ Anzeigen der ersten Zeilen des Gapminder-Datensatzes.
 head(gapminder)
 ```
 
-## Lebenserwartung
+## Lebenserwartung Zusammenfassung
 
 Die folgende Tabeller zeigt die durchschnittliche Lebenserwartung pro Kontinent im Jahr 2007.
 
@@ -45,7 +45,7 @@ gapminder |>
   ) 
 ```
 
-## Lebenserwartung
+## Lebenserwartung Plot / Abbildung
 
 Filtern der Daten für das Jahr 2007.
 
