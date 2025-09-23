@@ -14,6 +14,8 @@ Daten können aus vielen verschiedenen Quellen importiert werden. In dieser Übu
 
 1.  einem R-Paket, das über die Funktion `library()` geladen wird.
 
+Laden der benötigten R-Pakete für die Analyse.
+
 ```{r}
 library(ggplot2)
 library(dplyr)
@@ -25,6 +27,8 @@ library(gt)
 
 Für diese Analyse verwenden wir den Gapminder-Datensatz aus dem R-Paket gapminder.
 
+Anzeigen der ersten Zeilen des Gapminder-Datensatzes.
+
 ```{r}
 head(gapminder)
 ```
@@ -32,6 +36,8 @@ head(gapminder)
 ## Lebenserwartung
 
 Die folgende Tabeller zeigt die durchschnittliche Lebenserwartung der Bevölkerung auf verschiedenen Kontinenten im Jahr 2007.
+
+Berechnung und Darstellung der durchschnittlichen Lebenserwartung pro Kontinent.
 
 ```{r}
 gapminder |> 
@@ -45,6 +51,8 @@ gapminder |>
 ```
 
 ## Lebenserwartung
+
+Filtern der Daten für das Jahr 2007 und Erstellen eines erweiterten Boxplots.
 
 ```{r}
 gapminder_2007 <- gapminder |> 
