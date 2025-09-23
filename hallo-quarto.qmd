@@ -1,6 +1,6 @@
 ---
 title: "Hallo Quarto"
-author: ""
+author: "Dein Name"
 date: today
 format: html
 editor: visual
