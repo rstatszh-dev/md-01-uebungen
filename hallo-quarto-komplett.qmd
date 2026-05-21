@@ -47,14 +47,22 @@ gapminder |>
 
 ## Lebenserwartung Plot / Abbildung
 
-Filtern der Daten für das Jahr 2007.
+Filtern der Daten für das Jahr 2007. Die Ausgabe erscheint in der Konsole bzw. unterhalb des Code-Chunks.
 
 ```{r}
 gapminder |>
   filter(year == 2007)
 ```
 
-Speichern der gefilterten Daten in einem neuen Objekt. Dieses taucht im Environment auf und kann wiederverwendet werden.
+Dieselben gefilterten Daten als formatierte Tabelle mit `knitr::kable()` ausgeben.
+
+```{r}
+gapminder |>
+  filter(year == 2007) |>
+  knitr::kable()
+```
+
+Speichern der gefilterten Daten in einem neuen Objekt. Dieses taucht im Environment auf und kann wiederverwendet werden. Beachte: Hier gibt es keine sichtbare Ausgabe, da das Ergebnis dem Objekt `gapminder_2007` zugewiesen wird.
 
 ```{r}
 gapminder_2007 <- gapminder |>
